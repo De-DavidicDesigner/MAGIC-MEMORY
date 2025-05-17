@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import SingleCard from "./components/SingleCard";
+import { Analytics } from "@vercel/analytics/react";
 
 const cardImages = [
   { src: "/img/helmet-1.png", matched: false },
@@ -94,6 +95,7 @@ function App() {
         ))}
       </div>
       <p className="mt-4">Turns: {turns}</p>
+      <Analytics />
     </div>
   );
 }
